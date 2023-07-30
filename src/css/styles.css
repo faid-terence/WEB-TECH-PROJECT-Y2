@@ -1,5 +1,7 @@
 /* Reset box-sizing to border-box for all elements */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -148,7 +150,7 @@ button:hover {
     border-radius: 5px;
     padding: 20px;
     margin: 10px;
-    flex: 1 0 200px; 
+    flex: 1 0 200px;
 }
 
 .card h4 {
@@ -193,9 +195,10 @@ button:hover {
     border-radius: 5px;
     padding: 20px;
     margin: 10px;
-    flex: 1 0 200px; 
+    flex: 1 0 200px;
 }
-.course-card i{
+
+.course-card i {
     color: #0aa5ff;
     display: flex;
     justify-content: center;
@@ -318,11 +321,13 @@ footer {
     color: white;
 }
 
-footer h2, footer h3 {
+footer h2,
+footer h3 {
     padding: 8px 0;
 }
 
-footer li, footer p {
+footer li,
+footer p {
     line-height: 27px;
     font-weight: 300;
 }
@@ -387,22 +392,30 @@ footer input[type='button'] {
 
 
 @media(max-width: 53rem) {
-    .menu{
+    .menu .menu-links {
         display: none;
     }
-    .menu-btn{
+    
+    /* CSS to show the menu links when the "show" class is added */
+    .menu.show .menu-links {
+        display: block;
+        margin-top: 30px;
+    }
+    .menu-btn {
         display: block;
     }
-    .content-columns{
+
+    .content-columns {
         width: 100%;
     }
-    .contact-container{
+
+    .contact-container {
         display: flex;
         flex-direction: column;
     }
-    .hero-container{
+
+    .hero-container {
         display: flex;
         flex-direction: column;
     }
 }
-

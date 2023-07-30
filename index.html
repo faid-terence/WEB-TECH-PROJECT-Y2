@@ -11,25 +11,27 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <i class="fa-solid fa-font-awesome"></i>
-            <a href="#">CODE WITH FAID</a>
-        </div>
-        <div class="menu">
-            <div class="menu-links">
-                <a href="#home">Home</a> 
-                <a href="#about">About</a>
-                <a href="#course">Courses</a>
-                <a href="#contact">Contact </a>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-font-awesome"></i>
+                <a href="#">CODE WITH FAID</a>
             </div>
-            <button class="log-in">Login<a href="./assets/SignUp.html"></a></button>
-
-        </div>
-        <div class="menu-btn">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </nav>
+            <div class="menu">
+                <div class="menu-links">
+                    <a href="#home">Home</a> 
+                    <a href="#about">About</a>
+                    <a href="#course">Courses</a>
+                    <a href="#contact">Contact </a>
+  
+                </div>
+                <button class="log-in">Login<a href="./assets/SignUp.html"></a></button>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-times" style="display: none;"></i>
+                </div>  
+            </div>
+            
+        </nav>
 
         <section class="home-section" id="home">
             <div class="hero-container">    
@@ -175,6 +177,23 @@
         </div>
         </div>
     </footer>
+    <!-- Add this jQuery script to your HTML file -->
+<!-- Add this jQuery script to your HTML file -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Click event listener for the menu button
+            $(".menu-btn").on("click", function() {
+                $(".menu").toggleClass("show");
+                $(".log-in").remove();
+                $(".menu-btn i").toggleClass("fa-bars fa-times");
+                $(".logo").remove();
+                $("nav").css("background-color", "Gray");
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
