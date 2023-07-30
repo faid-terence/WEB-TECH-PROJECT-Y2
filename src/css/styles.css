@@ -66,6 +66,9 @@ a:hover {
     cursor: pointer;
     font-size: 32px;
 }
+.log-in a{
+    color: #f8f8f8;
+}
 
 /* Styles for the hero section */
 .home-section {
