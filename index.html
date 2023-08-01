@@ -6,47 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CODE WITH FAID</title>
     <link rel="stylesheet" href="./src/css/styles.css   ">
-    <link rel="icon" type="image/svg+xml" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAB6CAMAAABHh7fWAAAAY1BMVEX///8AAABZWVnw8PBra2vFxcVgYGDMzMxjY2P8/PyKiork5OS3t7fT09OAgIDz8/Onp6eenp6wsLA4ODg/Pz9JSUnb29t5eXlRUVFEREQmJia9vb2RkZEQEBAuLi4gICAXFxdOuHmjAAADmklEQVRoge2Y2ZajIBBAS8EFUREXNHFJ//9XDookMWI63Sedl6n7lByQK4hlFQAIgiAIgiAIgiAIgiAIgjyBUf87OgnAn/eIHgYNu1vjqT9yS+9bOFcQPevQggg2g/Lq1phDwdxqMa1dxss0XUbzs6pP9TSuDQl0JUD2Zf5NXXPS1NXlOnhNgMrtqMT3rlfH0m22025KRYQg5fInZhqhEnMxK/35trPzOhRbECSTqz2Aod3NKLZmOhyZAeYehb7RoJBFvvSnUEpZBIR/LU0jX/ql61gpjeMwpG3BoV1uFIJ6v6TZ0tuHPD82g57cACJshjItrXoq0iI5tXoRLiDXKVl1W3JCCFdpQtXsVqJS+1HN5ggh5E/UyvviUKd3F1Bolmlkke9JGNVWnWfXVS2Ck9dB61pSq46fqaGLIV2XJbBqYf4XHg9COFJreeD1RG+z36oLvRfUVn1a1SoE3743LrWOCywpXIO+pua9aMCtZpyMtptTDQzOztf2NbXe3fRADdAnz9XAKbh4VX1lr4brnPZqsu3wdvWVnXqQ6jA+/15dv6AuvSLaRbGPqHW4KaLjUPVWdW/Vyt7Ih9RMmSAbpv5QlqUcP6Vmg+fgT9TVNjaKxmX+iLr1ZEaKpa3NFsoPqZXPdbRt121G+EwxfkStP8+0Tqw66SilcVL8kXraLjgL5ePLNffdqSN2DavvUsO84XeBNH1Qs6QCZePb29TgUgML7gMpb+akzmYsf6wGkW2bc8jLD6lvsMQ0xrbx1+rzD9XKpPwDdNZk1fSP1f1aqQzQbNUNo9Gu91vVag3xyeOsvWh4Uny8Qw1ATZQFavNXEwU8L5tenPav1ev6grRZ5FrB6urCc6Xpb1SDedqcV+vn1iyDLrpIdVDjvk1tvmvSlrtkrbB7cFcIx+rLXk3MPBqRONNQtnzSvwTplqdtqmVdhfLza2ZuUoKJ1LuZcXsEEEaV81XlS/3dMZboylGZ0rshEAauzjvW6l27+8fhA+9KmNbOq9WyxnUqOJfmCCIU7ip0T3kbfkw22RnLvTuaJHRe/5DAnXtg/nGifg8f5I3SnGLYQYm4Y390skB6wcq4WiZ8OeXBHOQOj1F2t72ZwuaG2QYxubYal4FOFbjKMkX0j8ivXw2i+usT0zsu6a1JxRtod3JutT6RvTKnHXnTlK+90MZN7hH3T1uQbRtxD8vmE5Y4DOM8VT8QIwiCIAiCIAiCIAiCIMj/zT+vAjZIqF5c6wAAAABJRU5ErkJggg==  " />
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAB6CAMAAABHh7fWAAAAY1BMVEX///8AAABZWVnw8PBra2vFxcVgYGDMzMxjY2P8/PyKiork5OS3t7fT09OAgIDz8/Onp6eenp6wsLA4ODg/Pz9JSUnb29t5eXlRUVFEREQmJia9vb2RkZEQEBAuLi4gICAXFxdOuHmjAAADmklEQVRoge2Y2ZajIBBAS8EFUREXNHFJ//9XDookMWI63Sedl6n7lByQK4hlFQAIgiAIgiAIgiAIgiAIgjyBUf87OgnAn/eIHgYNu1vjqT9yS+9bOFcQPevQggg2g/Lq1phDwdxqMa1dxss0XUbzs6pP9TSuDQl0JUD2Zf5NXXPS1NXlOnhNgMrtqMT3rlfH0m22025KRYQg5fInZhqhEnMxK/35trPzOhRbECSTqz2Aod3NKLZmOhyZAeYehb7RoJBFvvSnUEpZBIR/LU0jX/ql61gpjeMwpG3BoV1uFIJ6v6TZ0tuHPD82g57cACJshjItrXoq0iI5tXoRLiDXKVl1W3JCCFdpQtXsVqJS+1HN5ggh5E/UyvviUKd3F1Bolmlkke9JGNVWnWfXVS2Ck9dB61pSq46fqaGLIV2XJbBqYf4XHg9COFJreeD1RG+z36oLvRfUVn1a1SoE3743LrWOCywpXIO+pua9aMCtZpyMtptTDQzOztf2NbXe3fRADdAnz9XAKbh4VX1lr4brnPZqsu3wdvWVnXqQ6jA+/15dv6AuvSLaRbGPqHW4KaLjUPVWdW/Vyt7Ih9RMmSAbpv5QlqUcP6Vmg+fgT9TVNjaKxmX+iLr1ZEaKpa3NFsoPqZXPdbRt121G+EwxfkStP8+0Tqw66SilcVL8kXraLjgL5ePLNffdqSN2DavvUsO84XeBNH1Qs6QCZePb29TgUgML7gMpb+akzmYsf6wGkW2bc8jLD6lvsMQ0xrbx1+rzD9XKpPwDdNZk1fSP1f1aqQzQbNUNo9Gu91vVag3xyeOsvWh4Uny8Qw1ATZQFavNXEwU8L5tenPav1ev6grRZ5FrB6urCc6Xpb1SDedqcV+vn1iyDLrpIdVDjvk1tvmvSlrtkrbB7cFcIx+rLXk3MPBqRONNQtnzSvwTplqdtqmVdhfLza2ZuUoKJ1LuZcXsEEEaV81XlS/3dMZboylGZ0rshEAauzjvW6l27+8fhA+9KmNbOq9WyxnUqOJfmCCIU7ip0T3kbfkw22RnLvTuaJHRe/5DAnXtg/nGifg8f5I3SnGLYQYm4Y390skB6wcq4WiZ8OeXBHOQOj1F2t72ZwuaG2QYxubYal4FOFbjKMkX0j8ivXw2i+usT0zsu6a1JxRtod3JutT6RvTKnHXnTlK+90MZN7hH3T1uQbRtxD8vmE5Y4DOM8VT8QIwiCIAiCIAiCIAiCIMj/zT+vAjZIqF5c6wAAAABJRU5ErkJggg==  " />
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-        <nav class="navbar">
-            <div class="logo">
-                <i class="fa-solid fa-font-awesome"></i>
-                <a href="#">CODE WITH FAID</a>
-            </div>
-            <div class="menu">
-                <div class="menu-links">
-                    <a href="#home">Home</a> 
-                    <a href="#about">About</a>
-                    <a href="#course">Courses</a>
-                    <a href="#contact">Contact </a>
-  
-                </div>
-                <button class="log-in"><a href="./src/pages/login.html">LOGIN</a></button>
-                <div class="menu-btn">
-                    <i class="fa-solid fa-bars"></i>
-                    <i class="fa-solid fa-times" style="display: none;"></i>
-                </div>  
-            </div>
-            
-        </nav>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-font-awesome"></i>
+            <a href="#">CODE WITH FAID</a>
+        </div>
+        <div class="menu">
+            <div class="menu-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#course">Courses</a>
+                <a href="#contact">Contact </a>
 
-        <section class="home-section" id="home">
-            <div class="hero-container">    
-                <div class="hero-content">
-                    <h1>Learn to code</h1>
-                    <p>Welcome to our e-learning platform! Discover the world of coding with our vast collection of free resources. Unleash your potential and learn to code from scratch or enhance your existing skills with our interactive courses and tutorials. Join our community of passionate learners and embark on a journey towards mastering programming languages. Start coding for free today!   </p>
-                    <button>Get Started</button>
-                    
-                </div>
-                <div class="hero-image">
-                    <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/08/learn-coding-online-for-free.webp" alt="">
-                </div>
             </div>
-        </section>
+            <button class="log-in"><a href="./src/pages/login.html">LOGIN</a></button>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-times" style="display: none;"></i>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home-section" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Learn to code</h1>
+                <p>Welcome to our e-learning platform! Discover the world of coding with our vast collection of free
+                    resources. Unleash your potential and learn to code from scratch or enhance your existing skills
+                    with our interactive courses and tutorials. Join our community of passionate learners and embark on
+                    a journey towards mastering programming languages. Start coding for free today! </p>
+                <button>Get Started</button>
+
+            </div>
+            <div class="hero-image">
+                <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/08/learn-coding-online-for-free.webp"
+                    alt="">
+            </div>
+        </div>
+    </section>
     <section class="about-section" id="about">
         <div class="about-container">
             <div class="about-content">
@@ -57,13 +62,14 @@
                     <p>We Provide Free Courses For Complete Begineers.</p>
                 </div>
                 <div class="card">
-                    <h4>Complete Project Source Codes   </h4>
+                    <h4>Complete Project Source Codes </h4>
                     <img src="./assets/images/free.jpeg" alt="" height="150px">
                     <p>We Provide Free Courses For Complete Begineers.</p>
                 </div>
                 <div class="card">
                     <h4>Exprienced Mentors</h4>
-                    <img src="https://cdn-fcjfi.nitrocdn.com/ipStXRKnlBsOsYlarFicjjpErljwvbXG/assets/static/optimized/rev-156ec7f/wp-content/uploads/2018/03/Mentoring-1024x683.png" alt="" height="150px">
+                    <img src="https://cdn-fcjfi.nitrocdn.com/ipStXRKnlBsOsYlarFicjjpErljwvbXG/assets/static/optimized/rev-156ec7f/wp-content/uploads/2018/03/Mentoring-1024x683.png"
+                        alt="" height="150px">
                     <p>We Provide Free Courses For Complete Begineers.</p>
                 </div>
             </div>
@@ -73,34 +79,36 @@
         <div class="courses-container">
             <div class="course-content">
                 <h2>Our Courses</h2>
-                <div class="course-card">
-                    <i class="fa-solid fa-laptop"></i>
-                    <h4>UI/UX</h4>
-                    <p>UX design involves managing the user journey as they interact with a product or service, while UI design focuses on the actual construction of that product or service's interface.</p>
-                    <button>Enroll Now</button>
-                </div>
-                <div class="course-card">
-                    <i class="fa-solid fa-code"></i>
-                    <h4>Frontend Development</h4>
-                    <p>Front-end development is the process of building components that interact with users. Examples are the user interface, buttons, user-entered data, websites, and user experience (UX) features.</p>
-                    <button>Enroll Now</button>
-                </div>
-                <div class="course-card">
-                    <i class="fa-solid fa-laptop-code"></i>
-                    <h4>Backend Development</h4>
-                    <p>Backend development refers to the process of creating and maintaining the server-side of a web application or software.</p>
-                    <button>Enroll Now</button>
-                </div>
-                <div class="course-card">
-                    <i class="fa-solid fa-database"></i>
-                    <h4>Databases</h4>
-                    <p>A database is a structured collection of data that is organized and stored in a way that allows efficient data retrieval, manipulation, and management.</p>
-                    <button>Enroll Now</button>
+                <div class="courses-content">
+                    <div class="card">
+                        <img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/255124403/original/c9fea4698c5b96eab90676586b50db65ffc4982a/teach-you-the-basics-of-frontend.png      "
+                            alt="" class="src">
+                        <h4>Front-end Development</h4>
+                        <p>Frontend development, also known as client-side development, refers to the process of creating the user interface (UI) and user experience (UX) components of a web application or software that users directly interact with. Frontend developers are responsible for translating design mockups and wireframes into functional and visually appealing web pages.
+                        </p>
+                        <button>Enroll Now</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://pbs.twimg.com/media/E1l5bnvUcAAisX6.jpg:large"
+                            alt="" class="" height="10px">
+                        <h4>Back-end Development</h4>
+                        <p>Backend development refers to the process of building and maintaining the server-side of a web application or software. It involves handling the logic, databases, server operations, and other functionalities that occur behind the scenes and are not directly visible to users.      </p>
+                            <button>Enroll Now</button>
+                    </div>
+                    <div class="card">
+                        <img src="https://f4n3x6c5.stackpathcdn.com/article/what-is-database-management/Images/What%20is%20Database%20Management.jpg"
+                            alt="" class="src">
+                        <h4>Databases</h4>
+                        <p>Databases are organized collections of structured data that are designed to efficiently store, retrieve, and manage information. They are a fundamental part of most software systems, including web applications, mobile apps, enterprise systems, and more. Databases allow for the persistent storage and retrieval of data, ensuring that data is available even after the application or system is shut down or restarted.</p>
+                            <button>Enroll Now</button>
+                    </div>
+                
+                 
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section class="contact-section" id="contact">
         <div class="contact-container">
             <div class="contact-left">
@@ -132,62 +140,62 @@
             </div>
         </div>
     </section>
-    
+
 
     <footer>
         <div class="footer-container">
             <div class="col-1 content-columns">
-            <h2>CODE WITH FAID</h2>
-            <ul>
-                <li><i class="fa-solid fa-map"></i>Kigali, Rwanda</li>
-                <li><i class="fa-solid fa-phone"></i>+250784673536</li>
-                <li><i class="fa-solid fa-envelope"></i>faidterence@me</li>
-                <li><i class="fa-solid fa-globe"></i>www.codewithfaid.com</li>
-            </ul>
-        </div>
-        <div class="col-2 content-columns">
-            <h3>Useful links</h3>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Courses</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </div>
-        <div class="col-3 content-columns">
-            <h3>Our Courses</h3>
-            <ul>
-                <li>UI/UX</li>
-                <li>Front-end</li>
-                <li>Back-end</li>
-                <li>Databases</li>
-            </ul>
-        </div>
-        <div class="col-4 content-columns">
-            <h3>Our Newsletter</h3>
-            <div>
-                <p>Subscribe to get new Upadates</p>
-                <div class="search-input">
-                    <input type="email" placeholder="Input Your Email">
-                    <input type="button" value="Subscribe">
-                </div>
-                <div class="social-links">
-                    <a href=""><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-twitter"></i></a>
-                    <a href=""><i class="fab fa-github"></i></a>
-                    <a href=""><i class="fab fa-linkedin"></i></a>
+                <h2>CODE WITH FAID</h2>
+                <ul>
+                    <li><i class="fa-solid fa-map"></i>Kigali, Rwanda</li>
+                    <li><i class="fa-solid fa-phone"></i>+250784673536</li>
+                    <li><i class="fa-solid fa-envelope"></i>faidterence@me</li>
+                    <li><i class="fa-solid fa-globe"></i>www.codewithfaid.com</li>
+                </ul>
+            </div>
+            <div class="col-2 content-columns">
+                <h3>Useful links</h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Courses</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-3 content-columns">
+                <h3>Our Courses</h3>
+                <ul>
+                    <li>UI/UX</li>
+                    <li>Front-end</li>
+                    <li>Back-end</li>
+                    <li>Databases</li>
+                </ul>
+            </div>
+            <div class="col-4 content-columns">
+                <h3>Our Newsletter</h3>
+                <div>
+                    <p>Subscribe to get new Upadates</p>
+                    <div class="search-input">
+                        <input type="email" placeholder="Input Your Email">
+                        <input type="button" value="Subscribe">
+                    </div>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-github"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
     </footer>
     <!-- Add this jQuery script to your HTML file -->
-<!-- Add this jQuery script to your HTML file -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Add this jQuery script to your HTML file -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             // Click event listener for the menu button
-            $(".menu-btn").on("click", function() {
+            $(".menu-btn").on("click", function () {
                 $(".menu").toggleClass("show");
                 $(".log-in").remove();
                 $(".menu-btn i").toggleClass("fa-bars fa-times");
