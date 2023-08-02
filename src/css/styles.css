@@ -459,4 +459,7 @@ footer input[type='button'] {
         display: flex;
         flex-direction: column;
     }
+    .courses-content{
+        flex-direction: column      ;
+    }
 }
