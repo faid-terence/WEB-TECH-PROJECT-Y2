@@ -170,3 +170,24 @@ a:hover{
     margin-top: 3rem;
     cursor: pointer;
 }
+
+
+
+
+@media(max-width: 53rem) {
+    .main-courses {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-courses .card{
+        width: 100%;
+    }
+    .course-box .course{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .box{
+        width: 100%;
+    }
+}
