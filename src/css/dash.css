@@ -108,6 +108,9 @@ a:hover{
 .main-courses .card p{
     font-size: 12px;
 }
+.main-courses .card i{
+    color: #0aa5ff;
+}
 .main-courses .card button{
     padding: 7px 15px;
     font-size: 16px;
@@ -160,10 +163,31 @@ a:hover{
     margin-top: 5px;
 }
 .box button{
-    background: #000;
+    background-color: #007bff;
     color: #fff;
     padding: 7px 10px;
     border-radius: 10px;
     margin-top: 3rem;
     cursor: pointer;
+}
+
+
+
+
+@media(max-width: 53rem) {
+    .main-courses {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-courses .card{
+        width: 100%;
+    }
+    .course-box .course{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .box{
+        width: 100%;
+    }
 }
