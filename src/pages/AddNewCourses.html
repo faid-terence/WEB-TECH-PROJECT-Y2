@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAB6CAMAAABHh7fWAAAAY1BMVEX///8AAABZWVnw8PBra2vFxcVgYGDMzMxjY2P8/PyKiork5OS3t7fT09OAgIDz8/Onp6eenp6wsLA4ODg/Pz9JSUnb29t5eXlRUVFEREQmJia9vb2RkZEQEBAuLi4gICAXFxdOuHmjAAADmklEQVRoge2Y2ZajIBBAS8EFUREXNHFJ//9XDookMWI63Sedl6n7lByQK4hlFQAIgiAIgiAIgiAIgiAIgjyBUf87OgnAn/eIHgYNu1vjqT9yS+9bOFcQPevQggg2g/Lq1phDwdxqMa1dxss0XUbzs6pP9TSuDQl0JUD2Zf5NXXPS1NXlOnhNgMrtqMT3rlfH0m22025KRYQg5fInZhqhEnMxK/35trPzOhRbECSTqz2Aod3NKLZmOhyZAeYehb7RoJBFvvSnUEpZBIR/LU0jX/ql61gpjeMwpG3BoV1uFIJ6v6TZ0tuHPD82g57cACJshjItrXoq0iI5tXoRLiDXKVl1W3JCCFdpQtXsVqJS+1HN5ggh5E/UyvviUKd3F1Bolmlkke9JGNVWnWfXVS2Ck9dB61pSq46fqaGLIV2XJbBqYf4XHg9COFJreeD1RG+z36oLvRfUVn1a1SoE3743LrWOCywpXIO+pua9aMCtZpyMtptTDQzOztf2NbXe3fRADdAnz9XAKbh4VX1lr4brnPZqsu3wdvWVnXqQ6jA+/15dv6AuvSLaRbGPqHW4KaLjUPVWdW/Vyt7Ih9RMmSAbpv5QlqUcP6Vmg+fgT9TVNjaKxmX+iLr1ZEaKpa3NFsoPqZXPdbRt121G+EwxfkStP8+0Tqw66SilcVL8kXraLjgL5ePLNffdqSN2DavvUsO84XeBNH1Qs6QCZePb29TgUgML7gMpb+akzmYsf6wGkW2bc8jLD6lvsMQ0xrbx1+rzD9XKpPwDdNZk1fSP1f1aqQzQbNUNo9Gu91vVag3xyeOsvWh4Uny8Qw1ATZQFavNXEwU8L5tenPav1ev6grRZ5FrB6urCc6Xpb1SDedqcV+vn1iyDLrpIdVDjvk1tvmvSlrtkrbB7cFcIx+rLXk3MPBqRONNQtnzSvwTplqdtqmVdhfLza2ZuUoKJ1LuZcXsEEEaV81XlS/3dMZboylGZ0rshEAauzjvW6l27+8fhA+9KmNbOq9WyxnUqOJfmCCIU7ip0T3kbfkw22RnLvTuaJHRe/5DAnXtg/nGifg8f5I3SnGLYQYm4Y390skB6wcq4WiZ8OeXBHOQOj1F2t72ZwuaG2QYxubYal4FOFbjKMkX0j8ivXw2i+usT0zsu6a1JxRtod3JutT6RvTKnHXnTlK+90MZN7hH3T1uQbRtxD8vmE5Y4DOM8VT8QIwiCIAiCIAiCIAiCIMj/zT+vAjZIqF5c6wAAAABJRU5ErkJggg==  " />
+    <title>Admin Dashboard | Code with Faid</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/addNew.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="" class="logo">
+                        <img src="../../assets/images/mylogo.png" alt="">
+                        <span class="nav-item">Dashboard</span>
+                    </a></li>
+                <li><a href="">
+                        <i class="fas fa-home"></i>
+                        <span class="nav-item">Home</span>
+                    </a></li>
+                <li><a href="">
+                        <i class="fas fa-user"></i>
+                        <span class="nav-item">Profiles</span>
+                    </a></li>
+                <li><a href="">
+                        <i class="fas fa-tasks"></i>
+                        <span class="nav-item">Courses</span>
+                    </a></li>
+                <li><a href="">
+                        <i class="fas fa-cog"></i>
+                        <span class="nav-item">Settings</span>
+                    </a></li>
+                <li><a href="" class="logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="nav-item">Log Out</span>
+                    </a></li>
+            </ul>
+        </nav>
+        <div class="form-content">
+            <h1>Add New Courses</h1>
+            <form class="course-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="subtitle">Subtitle:</label>
+                <input type="text" id="subtitle" name="subtitle">
+                
+                <label for="description">Full Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+                
+                <label for="image">Image URL:</label>
+                <input type="url" id="image" name="image" required>
+                
+                <label for="dateCreated">Date Created:</label>
+                <input type="date" id="dateCreated" name="dateCreated" required>
+                
+                <button type="submit">Add Course</button>
+            </form> 
+        </div>
+    </div>
+    
+</body>
+</html>
