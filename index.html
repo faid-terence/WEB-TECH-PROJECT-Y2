@@ -38,76 +38,85 @@
     <section class="home-section" id="home">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>Learn to code</h1>
-                <p>Welcome to our e-learning platform! Discover the world of coding with our vast collection of free
-                    resources. Unleash your potential and learn to code from scratch or enhance your existing skills
-                    with our interactive courses and tutorials. Join our community of passionate learners and embark on
-                    a journey towards mastering programming languages. Start coding for free today! </p>
-                <button>Get Started</button>
-
+                <h1 class="hero-title">Unlock the World of Coding</h1>
+                <p class="hero-description">Welcome to our immersive e-learning platform! Explore the realm of coding with our diverse array of free resources. Unleash your potential and embark on a journey of discovery.</p>
+                <button class="btn-hero">Get Started</button>
             </div>
             <div class="hero-image">
-                <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/08/learn-coding-online-for-free.webp"
-                    alt="">
+                <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/08/learn-coding-online-for-free.webp" alt="Coding Illustration">
             </div>
         </div>
     </section>
+    
     <section class="about-section" id="about">
         <div class="about-container">
-            <div class="about-content">
-                <h2>Why Choose Code With Terence?</h2>
+            <h2 class="section-title">Why Choose Code With Terence?</h2>
+            <div class="cards-container">
                 <div class="card">
-                    <h4>Best Free Courses</h4>
-                    <img src="./assets/images/free.jpeg" alt="" height="150px">
-                    <p>We Provide Free Courses For Complete Begineers.</p>
+                    <div class="card-icon">
+                        <img src="./assets/images/free.jpeg" alt="Free Courses">
+                    </div>
+                    <h4 class="card-title">Best Free Courses</h4>
+                    <p class="card-description">Access our comprehensive range of free courses designed for beginners.</p>
                 </div>
                 <div class="card">
-                    <h4>Complete Project Source Codes </h4>
-                    <img src="./assets/images/free.jpeg" alt="" height="150px">
-                    <p>We Provide Free Courses For Complete Begineers.</p>
+                    <div class="card-icon">
+                        <img src="./assets/images/code.png" alt="Project Source Codes">
+                    </div>
+                    <h4 class="card-title">Complete Project Source Codes</h4>
+                    <p class="card-description">Get complete source codes for projects to enhance your learning experience.</p>
                 </div>
                 <div class="card">
-                    <h4>Exprienced Mentors</h4>
-                    <img src="https://cdn-fcjfi.nitrocdn.com/ipStXRKnlBsOsYlarFicjjpErljwvbXG/assets/static/optimized/rev-156ec7f/wp-content/uploads/2018/03/Mentoring-1024x683.png"
-                        alt="" height="150px">
-                    <p>We Provide Free Courses For Complete Begineers.</p>
+                    <div class="card-icon">
+                        <img src="https://cdn-fcjfi.nitrocdn.com/ipStXRKnlBsOsYlarFicjjpErljwvbXG/assets/static/optimized/rev-156ec7f/wp-content/uploads/2018/03/Mentoring-1024x683.png" alt="Experienced Mentors">
+                    </div>
+                    <h4 class="card-title">Experienced Mentors</h4>
+                    <p class="card-description">Learn from experienced mentors who provide guidance and support throughout your journey.</p>
                 </div>
             </div>
         </div>
     </section>
+    
     <section class="courses-section" id="course">
         <div class="courses-container">
             <div class="course-content">
-                <h2>Our Courses</h2>
+                <h2 class="section-title">Our Courses</h2>
                 <div class="courses-content">
-                    <div class="card">
-                        <img src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/255124403/original/c9fea4698c5b96eab90676586b50db65ffc4982a/teach-you-the-basics-of-frontend.png      "
-                            alt="" class="src">
-                        <h4>Front-end Development</h4>
-                        <p>Frontend development, also known as client-side development, refers to the process of creating the user interface (UI) and user experience (UX) components of a web application or software that users directly interact with. Frontend developers are responsible for translating design mockups and wireframes into functional and visually appealing web pages.
-                        </p>
-                        <button>Enroll Now</button>
+                    <div class="pricing-card">
+                        <img src="./assets/images/frontend.webp" alt="Front-End Course" class="course-image">
+                        <h2 class="plan">Front-End</h2>
+                        <p class="price">$0<span>/course</span></p>
+                        <ul class="features">
+                            <li>Unlimited Access to Course Content</li>
+                            <li>Interactive Quizzes</li>
+                        </ul>
+                        <button class="btn">Enroll Now</button>
                     </div>
-                    <div class="card">
-                        <img src="https://pbs.twimg.com/media/E1l5bnvUcAAisX6.jpg:large"
-                            alt="" class="" height="10px">
-                        <h4>Back-end Development</h4>
-                        <p>Backend development refers to the process of building and maintaining the server-side of a web application or software. It involves handling the logic, databases, server operations, and other functionalities that occur behind the scenes and are not directly visible to users.      </p>
-                            <button>Enroll Now</button>
+                    <div class="pricing-card">
+                        <img src="./assets/images/backend.webp" alt="Back-End Dev Course" class="course-image">
+                        <h2 class="plan">Back-End</h2>
+                        <p class="price">$0<span>/course</span></p>
+                        <ul class="features">
+                            <li>Unlimited Access to Course Content</li>
+                            <li>Frameworks like Node.js, NestJS...</li>
+                        </ul>
+                        <button class="btn">Enroll Now</button>
                     </div>
-                    <div class="card">
-                        <img src="https://f4n3x6c5.stackpathcdn.com/article/what-is-database-management/Images/What%20is%20Database%20Management.jpg"
-                            alt="" class="src">
-                        <h4>Databases</h4>
-                        <p>Databases are organized collections of structured data that are designed to efficiently store, retrieve, and manage information. They are a fundamental part of most software systems, including web applications, mobile apps, enterprise systems, and more. Databases allow for the persistent storage and retrieval of data, ensuring that data is available even after the application or system is shut down or restarted.</p>
-                            <button>Enroll Now</button>
+                    <div class="pricing-card">
+                        <img src="./assets/images/databases.png" alt="Databases Course" class="course-image">
+                        <h2 class="plan">Databases</h2>
+                        <p class="price">$0<span>/course</span></p>
+                        <ul class="features">
+                            <li>Unlimited Access to Course Content</li>
+                            <li>SQL & No-SQL</li>
+                        </ul>
+                        <button class="btn">Enroll Now</button>
                     </div>
-                
-                 
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section class="contact-section" id="contact">
         <div class="contact-container">

@@ -1,11 +1,11 @@
-/* Reset box-sizing to border-box for all elements */
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Global styles */
+
 body {
     margin: 0;
     padding: 0;
@@ -70,34 +70,55 @@ a:hover {
     color: #f8f8f8;
 }
 
-/* Styles for the hero section */
+
 .home-section {
-    padding: 80px 0;
     background-color: #f8f8f8;
+    padding: 100px 0;
 }
 
 .hero-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .hero-content {
     flex: 1;
-    max-width: 600px;
+    max-width: 500px;
 }
 
-.hero-content h1 {
+.hero-title {
     font-size: 36px;
-    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.hero-content p {
-    font-size: 16px;
-    line-height: 1.6;
+.hero-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #0056b3;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 8px;
 }
 
 button {
@@ -114,109 +135,149 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
 /* Styles for the about section */
 .about-section {
+    background-color: #f8f8f8;
     padding: 80px 0;
-    background-color: #f9f9f9;
 }
 
 .about-container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-.about-content {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
 }
 
-.about-content h2 {
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 30px;
+.cards-container {
+    display: flex;
+    justify-content: space-around;
 }
 
 .card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background-color: #fff;
+    border-radius: 8px;
     padding: 20px;
-    margin: 10px;
-    flex: 1 0 200px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 300px;
 }
 
-.card h4 {
-    font-size: 24px;
-    font-weight: bold;
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
     margin-bottom: 15px;
 }
 
-.card p {
-    font-size: 16px;
-    line-height: 1.5;
+.card-icon img {
+    max-height: 150px;
 }
+
+.card-title {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: #555;
+}
+
+
 
 /* Styles for the courses-section */
+
+
 .courses-section {
+    background-color: #f8f8f8;
     padding: 80px 0;
-    background-color: #f9f9f9;
 }
 
-.course-container {
-    max-width: 1200px;
+.courses-container {
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 .course-content {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.course-content h2 {
-    font-size: 32px;
-    font-weight: bold;
     text-align: center;
-    width: 100%;
-    margin-bottom: 30px;
 }
 
-.course-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 10px;
-    flex: 1 0 200px;
+.section-title {
+    color: #333;
+    margin-bottom: 40px;
 }
 
-.course-card i {
-    color: #0aa5ff;
+.courses-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.course-card h4 {
-    font-size: 24px;
-    font-weight: bold;
+.pricing-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.course-image {
+    width: 100%;
+    height: 200px       ;
+    border-radius: 8px;
     margin-bottom: 15px;
+}       
+
+.plan {
+    text-transform: uppercase;
+    margin-top: 10px;
 }
 
-.course-card p {
-    font-size: 16px;
-    line-height: 1.5;
+.price {
+    font-size: 24px;
+    color: #007bff;
 }
+
+.price span {
+    font-size: 14px;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.features li {
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
 
 
 /* Styles for the contact section */
@@ -262,8 +323,6 @@ button:hover {
     align-items: center;
     font-size: 16px;
 }
-
-/* Styles for the contact section (continued) */
 .contact-info i {
     font-size: 24px;
     margin-bottom: 5px;
@@ -392,44 +451,7 @@ footer input[type='button'] {
     color: white;
 }
 
-.courses-content {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .courses-content .card {
-    flex: 1;
-    margin: 50px 20px;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .courses-content .card img {
-    width: 100%;
-    height: 200px; /* Set a fixed height here, adjust as needed */
-    object-fit: cover; 
-  }
 
-  .courses-content .card button {
-    margin-top: auto; /* This will push the button to the end of the card */
-  }
-.courses-content .card h4
-{
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 18px;
-}
-.courses-content .card p{
-    font-size: 15px;
-    color: #6e6e6e;
-    padding: 10px;
-}
-.courses-content .card img:hover
-{
-    transform: scale(1.02);
-}
 
 
 @media(max-width: 53rem) {
