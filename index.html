@@ -23,15 +23,16 @@
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#course">Courses</a>
-                <a href="#contact">Contact </a>
-
+                <a href="#contact">Contact</a>
             </div>
             <button class="log-in"><a href="./src/pages/login.html">LOGIN</a></button>
-            <div class="menu-btn">
-                <i class="fa-solid fa-bars"></i>
-                <i class="fa-solid fa-times" style="display: none;"></i>
-            </div>
+
         </div>
+        <div class="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-times" style="display: none;"></i>
+        </div>
+
 
     </nav>
 
@@ -39,15 +40,18 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">Unlock the World of Coding</h1>
-                <p class="hero-description">Welcome to our immersive e-learning platform! Explore the realm of coding with our diverse array of free resources. Unleash your potential and embark on a journey of discovery.</p>
+                <p class="hero-description">Welcome to our immersive e-learning platform! Explore the realm of coding
+                    with our diverse array of free resources. Unleash your potential and embark on a journey of
+                    discovery.</p>
                 <button class="btn-hero">Get Started</button>
             </div>
             <div class="hero-image">
-                <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/08/learn-coding-online-for-free.webp" alt="Coding Illustration">
+                <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/08/learn-coding-online-for-free.webp"
+                    alt="Coding Illustration">
             </div>
         </div>
     </section>
-    
+
     <section class="about-section" id="about">
         <div class="about-container">
             <h2 class="section-title">Why Choose Code With Terence?</h2>
@@ -57,26 +61,30 @@
                         <img src="./assets/images/free.jpeg" alt="Free Courses">
                     </div>
                     <h4 class="card-title">Best Free Courses</h4>
-                    <p class="card-description">Access our comprehensive range of free courses designed for beginners.</p>
+                    <p class="card-description">Access our comprehensive range of free courses designed for beginners.
+                    </p>
                 </div>
                 <div class="card">
                     <div class="card-icon">
                         <img src="./assets/images/code.png" alt="Project Source Codes">
                     </div>
                     <h4 class="card-title">Complete Project Source Codes</h4>
-                    <p class="card-description">Get complete source codes for projects to enhance your learning experience.</p>
+                    <p class="card-description">Get complete source codes for projects to enhance your learning
+                        experience.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon">
-                        <img src="https://cdn-fcjfi.nitrocdn.com/ipStXRKnlBsOsYlarFicjjpErljwvbXG/assets/static/optimized/rev-156ec7f/wp-content/uploads/2018/03/Mentoring-1024x683.png" alt="Experienced Mentors">
+                        <img src="https://cdn-fcjfi.nitrocdn.com/ipStXRKnlBsOsYlarFicjjpErljwvbXG/assets/static/optimized/rev-156ec7f/wp-content/uploads/2018/03/Mentoring-1024x683.png"
+                            alt="Experienced Mentors">
                     </div>
                     <h4 class="card-title">Experienced Mentors</h4>
-                    <p class="card-description">Learn from experienced mentors who provide guidance and support throughout your journey.</p>
+                    <p class="card-description">Learn from experienced mentors who provide guidance and support
+                        throughout your journey.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section class="courses-section" id="course">
         <div class="courses-container">
             <div class="course-content">
@@ -116,7 +124,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <section class="contact-section" id="contact">
         <div class="contact-container">
@@ -198,7 +206,6 @@
             </div>
         </div>
     </footer>
-    <!-- Add this jQuery script to your HTML file -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -206,13 +213,12 @@
             // Click event listener for the menu button
             $(".menu-btn").on("click", function () {
                 $(".menu").toggleClass("show");
-                $(".log-in").remove();
                 $(".menu-btn i").toggleClass("fa-bars fa-times");
-                $(".logo").remove();
-                $("nav").css("background-color", "Gray");
             });
         });
     </script>
+
+
 
 
 </body>
