@@ -281,6 +281,7 @@ button:hover {
 
 
 /* Styles for the contact section */
+/* Styles for the contact section */
 .contact-section {
     padding: 80px 0;
     background-color: #f9f9f9;
@@ -323,6 +324,8 @@ button:hover {
     align-items: center;
     font-size: 16px;
 }
+
+/* Styles for the contact section (continued) */
 .contact-info i {
     font-size: 24px;
     margin-bottom: 5px;
@@ -454,34 +457,110 @@ footer input[type='button'] {
 
 
 
-@media(max-width: 53rem) {
-    .menu .menu-links {
-        display: none;
+
+
+
+
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
     }
-    
-    /* CSS to show the menu links when the "show" class is added */
-    .menu.show .menu-links {
-        display: block;
-        margin-top: 30px;
-    }
+
     .menu-btn {
         display: block;
     }
 
-    .content-columns {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #f8f8f8;
+        position: absolute;
+        top: 90px;
+        left: 0;
         width: 100%;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .contact-container {
+    .menu.active {
         display: flex;
-        flex-direction: column;
+    }
+
+    .menu-links {
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid #999999;
+    }
+
+    .menu-links a {
+        display: block;
+        padding: 10px 0;
     }
 
     .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .btn-hero {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        border-radius: 4px;
+    }
+
+    .about-container {
+        text-align: center;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .course-content {
+        padding: 0 20px;
+    }
+
+    .pricing-card {
+        width: 100%;
+    }
+
+    .course-image {
+        height: auto;
+    }
+
+    .col-1 i,
+    .col-1 li::marker {
+        margin-right: 10px;
+    }
+    .contact-container{
         display: flex;
         flex-direction: column;
     }
-    .courses-content{
-        flex-direction: column      ;
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .col-4-content p {
+        margin-bottom: 10px;
     }
 }
