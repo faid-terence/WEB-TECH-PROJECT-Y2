@@ -204,7 +204,26 @@ button {
     cursor: pointer;
 }
 
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
+.create-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.create-button i {
+    margin-right: 5px;
+}
 
 
 @media(max-width: 53rem) {
