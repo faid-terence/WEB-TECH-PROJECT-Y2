@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'config/db.php'; 
+require 'src/config/db.php'; 
 
 // Check if the user is logged in as an admin
 if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin'] || !isset($_SESSION['isAdmin']) || !$_SESSION['isAdmin']) {
