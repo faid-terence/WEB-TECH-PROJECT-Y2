@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'config/db.php';
+require 'src/config/db.php';
 $errors = array();
 $username = "";
 $email = "";
@@ -34,7 +34,7 @@ if (isset($_POST['register-btn'])) {
     $stmtEmail = $conn->prepare($emailQuery);
     $stmtEmail->bind_param("s", $email);
     $stmtEmail->execute();
-    $stmtEmail->store_result(); // Store the result
+    $stmtEmail->store_result(); // Store the result in our database
     if ($stmtEmail->num_rows > 0) {
         $errors['email'] = "Email already exists";
     }
@@ -53,14 +53,16 @@ if (isset($_POST['register-btn'])) {
         $stmtInsert->bind_param("ssbss", $username, $email, $isAdmin, $token, $password1);
 
         if ($stmtInsert->execute()) {
-            // Registration successful, now you can redirect the user
+            // Registration successful, set sessions and redirections
             $_SESSION['id'] = $stmtInsert->insert_id;
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
             $_SESSION['isAdmin'] = $isAdmin;
-            header('location: login.php');
+            header('location: src/pages/login.html');
             exit();
-        } else {
+        }
+        // Incase of unsuccessful login
+         else {
             $errors["db_error"] = "Registration not successful";
         }
     }
