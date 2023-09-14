@@ -12,33 +12,66 @@ if (!isset($_SESSION['loggedin']) || !$_SESSION['loggedin'] || !isset($_SESSION[
 $errors = array();
 
 if (isset($_POST['create-course-btn'])) {
-    $courseName = $_POST['course-name'];
+    $courseName = $_POST['course-title'];
     $courseLessons = $_POST['course-lessons'];
     $courseCategory = $_POST['course-category'];
     $courseDate = $_POST['course-date'];
     $courseDescription = $_POST['course-description'];
 
-    // Validation
-    if (empty($courseName) || empty($courseLessons) || empty($courseCategory) || empty($courseDate) || empty($courseDescription)) {
-        $errors[] = "All fields are required.";
-    } else {
-        // Insert the course into the database
-        $sql = "INSERT INTO courses (courseName, courseLessons, courseCategory, courseDate, courseDescription) VALUES (?, ?, ?, ?, ?)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssss", $courseName, $courseLessons, $courseCategory, $courseDate, $courseDescription);
+    // Handle Course Image Upload
+    $targetDirectory = "course_images/";
+    $targetFile = $targetDirectory . basename($_FILES["course-image"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
-        if ($stmt->execute()) {
-            // Course creation successful, redirect to a course listing
-            header('location: src/pages/AdminDashboard.html'); 
-            exit();
+    // Check if image file is a actual image or fake image
+    if(isset($_POST["create-course-btn"])) {
+        $check = getimagesize($_FILES["course-image"]["tmp_name"]);
+        if($check !== false) {
+            $uploadOk = 1;
         } else {
-            $errors[] = "Course creation failed.";
+            $errors[] = "File is not an image.";
+            $uploadOk = 0;
         }
+    }
 
-        $stmt->close();
+    // Check file size
+    if ($_FILES["course-image"]["size"] > 5000000) {
+        $errors[] = "Sorry, your file is too large.";
+        $uploadOk = 0;
+    }
+
+    // Allow only certain file formats
+    $allowedFormats = array("jpg", "jpeg", "png", "gif"); 
+    if (!in_array($imageFileType, $allowedFormats)) {
+        $errors[] = "Sorry, only JPG, JPEG, PNG, and GIF files are allowed.";
+        $uploadOk = 0;
+    }
+
+    if ($uploadOk == 0) {
+        $errors[] = "Sorry, your file was not uploaded.";
+    } else {
+        // Move the uploaded file to the specified directory
+        if (move_uploaded_file($_FILES["course-image"]["tmp_name"], $targetFile)) {
+            // Image upload successful
+            // Insert the course into the database along with the image file name
+            $sql = "INSERT INTO courses (courseName, courseLessons, courseCategory, courseDate, courseDescription, courseImage) VALUES (?, ?, ?, ?, ?, ?)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("ssssss", $courseName, $courseLessons, $courseCategory, $courseDate, $courseDescription, $targetFile);
+
+            if ($stmt->execute()) {
+                // Course creation successful, redirect to a course listing
+                header('location: src/pages/AdminDashboard.html'); 
+                exit();
+            } else {
+                $errors[] = "Course creation failed.";
+            }
+
+            $stmt->close();
+        } else {
+            $errors[] = "Sorry, there was an error uploading your file.";
+        }
     }
 }
 
 ?>
-
-
