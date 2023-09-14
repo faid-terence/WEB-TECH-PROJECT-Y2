@@ -20,38 +20,38 @@ Welcome to the E-Learning Project for our University's Web Technology Assignment
 The E-Learning platform is designed to provide the following:
 
 - A user-friendly interface for easy navigation and access to resources.
-- A diverse collection of coding tutorials, articles, and sample projects.
+- A diverse collection of coding courses, lessons, and sample projects.
 - A repository of free and open-source code snippets for practice and learning.
 - User profiles with personalized progress tracking and learning history.
 
 ## Features
 
-- Browse and search for coding tutorials, articles, and sample projects.
-- Access a curated library of free and open-source code snippets.
+
 - Create a user profile to save favorite resources and track progress.
-- Contribute by submitting your own code snippets and tutorials.
-- Interactive code editors to experiment with code examples directly on the platform.
+- Contribute by submitting your own code snippets and tutorials to faidterence@outlook.com.
+- Learn on your own Pace
 - Mobile-responsive design for learning on-the-go.
 
 ## Technologies Used
 
 - HTML5, CSS3, JavaScript for the front-end development.
-- Node.js and Express for the back-end server.
-- MongoDB for database management.
+- PHP for server side
+- MySQL for database management.
 - Git and GitHub for version control and collaboration.
-- CodeMirror or similar for embedding interactive code editors.
+- Visual Studio or similar for embedding interactive code editors.
 - Additional libraries and frameworks as needed.
 
 ## Installation
 
 1. Clone this repository: `git clone https://github.com/your-username/e-learning-project.git`
 2. Navigate to the project directory: `cd e-learning-project`
-3. Install dependencies: `npm install`
+3. Have XAAMP Installed to be able to use PHP and MySQL
+
 
 ## Usage
 
-1. Start the server: `npm start`
-2. Access the application in your web browser at: `http://localhost:3000`
+1. Hosted Link: `https://codewithfaid.netlify.app/`
+2. LocalHost: `http://127.0.0.1:5500/`
 
 ## Contributing
 
@@ -65,4 +65,4 @@ We welcome contributions from the community! If you'd like to contribute to this
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [Terence Faid JABO'S](LICENSE).
