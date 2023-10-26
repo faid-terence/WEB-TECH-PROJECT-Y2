@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const loginForm = document.querySelector("form");
   loginForm.addEventListener("submit", function (e) {
@@ -7,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const apiUrl = "http://localhost:3000/auth/login";
-
-    // Create a data object to send with the POST request
     const data = {
       email: email,
       password: password,
@@ -23,12 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then((response) => response.json())
       .then((data) => {
-        // Handle the response from the server
         if (data.success) {
-          // Successful login, you can redirect or perform other actions here
           window.location.href = "./StudentDashboard.html";
         } else {
-          // Display an error message or take appropriate action
           alert(data.message);
         }
       })
