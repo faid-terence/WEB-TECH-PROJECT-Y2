@@ -18,16 +18,24 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        console.log("Response:", response);
+        return response.json();
+      })
       .then((data) => {
-        if (data.success) {
-          window.location.href = "./StudentDashboard.html";
-        } else {
+        console.log("Data:", data);
+
+        if (data && data.success) {
+          window.location.href = "src/pages/StudentDashboard.html";
+        } else if (data && data.message) {
           alert(data.message);
+        } else {
+          alert("Unknown error occurred.");
         }
       })
       .catch((error) => {
         console.error("Error:", error);
+        alert("An error occurred while processing your request.");
       });
   });
 });
